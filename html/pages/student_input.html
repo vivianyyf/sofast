@@ -1,0 +1,286 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>SAIC-GM</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="../js/allJs.js"></script>
+</head>
+
+<body <body ng-app="soFast" class="ng-scope">
+    <div class="header page_header"> Sofast</div>
+    <div class="container">
+        <div class="register-main well">
+            <form class="form-horizontal clearfix">
+                <div class="subtitle">Personal Information</div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">First Name</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control"> </div>
+                    <label for="inputPassword3" class="col-sm-2 control-label">Family Name</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control"> </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">Passport Number</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control"> </div>
+                    <label for="inputPassword3" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control"> </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">Date of Birth</label>
+                    <div class="col-sm-4">
+                        <div ng-controller="DatepickerPopupDemoCtrl" class="ng-scope">
+                            <div class="input-group">
+                                <input type="text" class="form-control ng-pristine ng-valid ng-isolate-scope ng-not-empty ng-valid-date ng-valid-required ng-touched" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" required="required">
+                                <div uib-datepicker-popup-wrap="" ng-model="date" ng-change="dateSelection(date)" template-url="uib/template/datepickerPopup/popup.html" class="ng-not-empty ng-valid">
+                                    <!-- ngIf: isOpen -->
+                                </div> <span class="input-group-btn">
+<button type="button" class="btn btn-default" ng-click="open1()"> <i class="glyphicon glyphicon-calendar"></i>
+</button>
+</span> </div>
+                        </div>
+                    </div>
+                    <label for="inputPassword3" class="col-sm-2 control-label">Country of Birth</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control"> </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">Nationality/Citizenship</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control"> </div>
+                </div>
+                <div class="subtitle">Contact Details</div>
+                <div class="unit_title">Permanent Home Address</div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-xs-2 control-label">Address Line 1</label>
+                    <div class="col-xs-4">
+                        <input type="text" placeholder="" class="form-control"> </div>
+                    <label for="inputPassword3" class="col-xs-2 control-label">Address Line 2</label>
+                    <div class="col-xs-4">
+                        <input type="text" placeholder="" class="form-control"> </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-xs-2 control-label">Country</label>
+                    <div class="col-xs-4">
+                        <select class="form-control">
+                            <option value="">please select City</option>
+                        </select>
+                    </div>
+                    <label for="inputPassword3" class="col-xs-2 control-label">State/Province</label>
+                    <div class="col-xs-4">
+                        <input type="text" placeholder="" class="form-control"> </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-xs-2 control-label">City</label>
+                    <div class="col-xs-4">
+                        <input type="text" placeholder="" class="form-control"> </div>
+                    <label for="inputPassword3" class="col-xs-2 control-label">Zip Code/Postal Code</label>
+                    <div class="col-xs-4">
+                        <input type="text" placeholder="" class="form-control"> </div>
+                </div>
+                <div class="unit_title">Mailing Address</div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-xs-2 control-label">Address Line 1</label>
+                    <div class="col-xs-4">
+                        <input type="text" placeholder="" class="form-control"> </div>
+                    <label for="inputPassword3" class="col-xs-2 control-label">Address Line 2</label>
+                    <div class="col-xs-4">
+                        <input type="text" placeholder="" class="form-control"> </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-xs-2 control-label">Country</label>
+                    <div class="col-xs-4">
+                        <select class="form-control">
+                            <option value="">please select City</option>
+                        </select>
+                    </div>
+                    <label for="inputPassword3" class="col-xs-2 control-label">State/Province</label>
+                    <div class="col-xs-4">
+                        <input type="text" placeholder="" class="form-control"> </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-xs-2 control-label">City</label>
+                    <div class="col-xs-4">
+                        <input type="text" placeholder="" class="form-control"> </div>
+                    <label for="inputPassword3" class="col-xs-2 control-label">Zip Code/Postal Code</label>
+                    <div class="col-xs-4">
+                        <input type="text" placeholder="" class="form-control"> </div>
+                </div>
+                <div class="form-group ">
+                    <label for="inputPassword3 " class="col-sm-2 control-label ">Phone Number</label>
+                    <div class="col-sm-4 ">
+                        <div class="row ">
+                            <div class="col-xs-4 ">
+                                <div ng-controller="ExampleController " class="drop_down ">
+                                    <select name="repeatSelect " id="repeatSelect " ng-model="data.model " class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ">
+                                        <!-- ngRepeat: option in data.availableOptions -->
+                                        <option ng-repeat="option in data.availableOptions " value="+86 " class="ng-binding ng-scope ">China (+86)</option>
+                                        <!-- end ngRepeat: option in data.availableOptions -->
+                                        <option ng-repeat="option in data.availableOptions " value="2 " class="ng-binding ng-scope ">China (+86)China (+86)China (+86)China (+86)</option>
+                                        <!-- end ngRepeat: option in data.availableOptions -->
+                                        <option ng-repeat="option in data.availableOptions " value="3 " class="ng-binding ng-scope ">Option C</option>
+                                        <!-- end ngRepeat: option in data.availableOptions -->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-8 ">
+                                <input type="text " placeholder="phone number " class="form-control "> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="subtitle ">Father’s Name</div>
+                <div class="form-group ">
+                    <label for="inputPassword3 " class="col-sm-2 control-label ">Phone Number</label>
+                    <div class="col-sm-4 ">
+                        <div class="row ">
+                            <div class="col-xs-4 ">
+                                <div ng-controller="ExampleController " class="drop_down ">
+                                    <select name="repeatSelect " id="repeatSelect " ng-model="data.model " class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ">
+                                        <!-- ngRepeat: option in data.availableOptions -->
+                                        <option ng-repeat="option in data.availableOptions " value="+86 " class="ng-binding ng-scope ">China (+86)</option>
+                                        <!-- end ngRepeat: option in data.availableOptions -->
+                                        <option ng-repeat="option in data.availableOptions " value="2 " class="ng-binding ng-scope ">China (+86)China (+86)China (+86)China (+86)</option>
+                                        <!-- end ngRepeat: option in data.availableOptions -->
+                                        <option ng-repeat="option in data.availableOptions " value="3 " class="ng-binding ng-scope ">Option C</option>
+                                        <!-- end ngRepeat: option in data.availableOptions -->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-8 ">
+                                <input type="text " placeholder="phone number " class="form-control "> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label for="inputPassword3 " class="col-sm-2 control-label ">Education</label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                    <label for="inputPassword3 " class="col-sm-2 control-label ">Profession</label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                </div>
+                <div class="subtitle ">Mother’s Name</div>
+                <div class="form-group ">
+                    <label for="inputPassword3 " class="col-sm-2 control-label ">Phone Number</label>
+                    <div class="col-sm-4 ">
+                        <div class="row ">
+                            <div class="col-xs-4 ">
+                                <div ng-controller="ExampleController " class="drop_down ">
+                                    <select name="repeatSelect " id="repeatSelect " ng-model="data.model " class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ">
+                                        <!-- ngRepeat: option in data.availableOptions -->
+                                        <option ng-repeat="option in data.availableOptions " value="+86 " class="ng-binding ng-scope ">China (+86)</option>
+                                        <!-- end ngRepeat: option in data.availableOptions -->
+                                        <option ng-repeat="option in data.availableOptions " value="2 " class="ng-binding ng-scope ">China (+86)China (+86)China (+86)China (+86)</option>
+                                        <!-- end ngRepeat: option in data.availableOptions -->
+                                        <option ng-repeat="option in data.availableOptions " value="3 " class="ng-binding ng-scope ">Option C</option>
+                                        <!-- end ngRepeat: option in data.availableOptions -->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-8 ">
+                                <input type="text " placeholder="phone number " class="form-control "> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="subtitle ">Program Type</div>
+                <div class="form-group ">
+                    <label for="inputPassword3 " class="col-sm-2 control-label ">Education</label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                    <label for="inputPassword3 " class="col-sm-2 control-label ">Profession</label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                </div>
+                <div class="form-group ">
+                    <label for="inputPassword3 " class="col-sm-2 control-label "></label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                    <label for="inputPassword3 " class="col-sm-2 control-label "></label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                </div>
+                <div class="form-group ">
+                    <label for="inputPassword3 " class="col-sm-2 control-label "></label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                    <label for="inputPassword3 " class="col-sm-2 control-label "></label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                </div>
+                <div class="form-group ">
+                    <label for="inputPassword3 " class="col-sm-2 control-label "></label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                    <label for="inputPassword3 " class="col-sm-2 control-label "></label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                </div>
+                <div class="form-group ">
+                    <label for="inputPassword3 " class="col-sm-2 control-label "></label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                    <label for="inputPassword3 " class="col-sm-2 control-label "></label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                </div>
+                <div class="form-group ">
+                    <label for="inputPassword3 " class="col-sm-2 control-label "></label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                    <label for="inputPassword3 " class="col-sm-2 control-label "></label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                </div>
+                <div class="form-group ">
+                    <label for="inputPassword3 " class="col-sm-2 control-label "></label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                    <label for="inputPassword3 " class="col-sm-2 control-label "></label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                </div>
+                <div class="form-group ">
+                    <label for="inputPassword3 " class="col-sm-2 control-label "></label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                    <label for="inputPassword3 " class="col-sm-2 control-label "></label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                </div>
+                <div class="form-group ">
+                    <label for="inputPassword3 " class="col-sm-2 control-label "></label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                    <label for="inputPassword3 " class="col-sm-2 control-label "></label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                </div>
+                <div class="form-group ">
+                    <label for="inputPassword3 " class="col-sm-2 control-label "></label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                    <label for="inputPassword3 " class="col-sm-2 control-label "></label>
+                    <div class="col-sm-4 ">
+                        <input type="text " class="form-control "> </div>
+                </div>
+                <div class="form-group ">
+                    <label class="col-sm-2 control-label "></label>
+                    <div class="col-sm-10 "> <span id="helpBlock " class="help-block ">说明：* 为必填项，请填写完整再提交。</span> </div>
+                </div>
+                <div class="form-group button-room ">
+                    <div class=" ">
+                        <button type="button " class="btn btn-primary btn-lg col-md-5 " onClick="javascript:location.href='regist_02.html ' ">
+                            <!-- <span class="glyphicon glyphicon-ok "></span>
+-->注册 </button>
+                        <button type="button " class="btn btn-default btn-lg col-md-6 pull-right " onClick="javascript:location.href='login.html ' "> <span class="glyphicon glyphicon-ok "></span> 已有账号，点击直接登陆 </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
