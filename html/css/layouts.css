@@ -1,0 +1,238 @@
+html, body, .main-container, .main-container .row , .main-container > .row > .col-md-3{
+	height: 100%;
+}
+body {
+	font-family: "Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: #000;
+}
+ul {
+	padding: 0;
+	list-style: none;
+}
+a, a:hover, a:focus {
+	color: #000;
+}
+
+.header {
+	background: #DEDEDE;
+	position: relative;
+    z-index: 3;
+    padding: 0 15px 15px 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    position: relative;
+}
+.header > img{
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+.header>.pull-right {
+	position: absolute;
+	top: 0;
+	right: 15px;
+}
+.header .pull-right .login-info {
+	margin-bottom: 20px;
+}
+.header .pull-right .login-info > span, 
+.header .pull-right .login-info a {
+	display: inline-block;
+	padding: 5px 10px;
+	margin-left: -3px;
+	background: #CCCCCC;
+	font-size: 12px;
+}
+.header .nav > li > a {
+	font-size: 12px;
+	color: #9fa0a0;
+}
+.header .nav-pills > li.active > a, 
+.header .nav-pills > li.active > a:hover, 
+.header .nav-pills > li.active > a:focus,
+.header .nav > li > a:hover, 
+.header .nav > li > a:focus {
+	background-color: transparent;
+	color: #000;
+}
+.main-container.container-fluid {
+	height: 100%;
+	position: relative;
+	z-index: 2;
+	margin-top: -115px;
+	padding-top: 125px;
+	padding-bottom: 10px;
+}
+.main-nav {
+	border-right: 1px solid #ccc;
+	height: 100%;
+	padding-right: 15px;
+	margin-right: -15px;
+}
+.main-nav .glyphicon {
+	top: 3px;
+}
+.main-nav > li > a {
+	font-size: 18px;
+	color: #000;
+	border-bottom: 1px solid #ccc;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+.main-nav > li.active > a, 
+.main-nav > li.active > a:hover, 
+.main-nav > li.active > a:focus {
+	color: #093868;
+	font-weight: bold;
+}
+.news-board {
+	text-align: center;
+	background-color: #DFDFDF;
+}
+.news-board .panel-heading {
+	background-color: #9FA0A0;
+}
+.news-board h3 {
+	font-weight: bold;
+	
+}
+.news-board a {
+	display: block;
+	font-size: 12px;
+	color: #b5b5b6;
+	border-top: 1px solid #b5b5b6;
+	padding: 5px 0;
+	margin: 0 10px;
+}
+.main-search .navbar-form {
+	padding: 0;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	border: none;
+}
+.main-search .collapse {
+	padding-left: 0;
+	padding-right: 0px;
+}
+.main-search .collapse.in {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.main-search .form-group .navbar-text{
+	margin: 0;
+	margin-top: 7px;
+}
+.main-search .form-group .dropdown button {
+	display: block;
+	width: 100%;
+	text-align: left;
+}
+.main-search .col-sm-2,
+.main-search .col-sm-4,
+.main-search .col-sm-6,
+.main-search .col-sm-3,
+.main-search .col-sm-5,
+.main-search .col-sm-9,
+.main-search .col-sm-8 {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.main-search button {
+	float: right;
+}
+.main-search button:first-child {
+	margin-left: 10px;
+}
+.mx-search button,
+.mx-search input {
+	font-size: 12px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.main-search.mx-search .form-group .navbar-text{
+	margin: 0;
+}
+.main-body-title {
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+.btn + .main-body-title {
+	margin-top: 50px;
+}
+.breadcrumb {
+	margin-bottom: 5px;
+	border-bottom: 1px solid #ccc;
+}
+.book-info {
+	line-height: 35px;
+	border-bottom: 1px solid #ccc;
+}
+.book-info .col-md-3 {
+	width: 22%;
+}
+.book-info .col-md-1 {
+	padding-right: 0;
+	width: 10%;
+}
+.book-container {
+	padding: 15px;
+}
+.book-container .watermark {
+	font-size: 145px;
+	color: #f7f8f8;
+	position: fixed;
+	bottom: 5%;
+	right: 5%;
+}
+.new.btn {
+/*	background: #DFDFDF;*/
+	text-align: left;
+}
+.table.user-rights div {
+	line-height: 1.42857;
+	display: inline-block;
+}
+.brand-list {
+}
+.brand-list li {
+	display: block;
+	margin: 15px 0;
+}
+
+.brand-list a {
+	font-size: 24px;
+	display: block;
+	padding: 30px 10px;
+	border: 1px solid #fff;
+	position: relative;
+}
+.brand-list a:hover {
+	text-decoration: none;
+	border: 1px solid #dfdfdf;
+}
+.brand-list a span:first-child {
+	display: inline-block;
+	width: 232px;
+	text-align: center;
+}
+.brand-list a span.glyphicon {
+	display: none;
+}
+.brand-list a:hover span.glyphicon{
+	display: block;
+	font-size: 48px;
+	position: absolute;
+	top: 36%;
+	right: 40px;
+	color: #dfdfdf;
+}
+.brand-list img {
+	margin-right: 15px;
+	height: 95px;
+}
+.brand-list .logo-last img {
+	height: 50px;
+}
