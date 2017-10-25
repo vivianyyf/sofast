@@ -3,7 +3,7 @@ function goBack() {
     window.history.go(-1)
 }
 
-var validationApp = angular.module('soFast', ['ui.bootstrap']);
+var validationApp = angular.module('soFast', ['ui.bootstrap', 'datatables']);
 // Date Picker
 validationApp.controller('DatepickerPopupDemoCtrl', function($scope) {
     $scope.today = function() {
