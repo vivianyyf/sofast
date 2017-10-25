@@ -1,0 +1,31 @@
+@login_input_bg: #DEDEDE;
+
+.login-main {
+	margin: 10px auto;
+	float: none;
+	width: 600px;
+	.well {
+		padding: 35px;
+		.form-group {
+			>label.control-label {
+				height: 45px;
+				border-right: 2px solid #fff;
+				width: 33.3333%;
+				text-align: right;
+				padding-top: 13px;
+			}
+			>label.control-label,
+			>div {
+				background-color: @login_input_bg;
+			}
+			.form-control {
+				border: medium none;
+				background: transparent none repeat scroll 0% 0%;
+				box-shadow: none;
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+				height: 45px;
+			}
+		}
+	}
+}
