@@ -1,24 +1,63 @@
+html,
+body {
+	height: 100%;
+}
+
 body {
 	font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #000;
+	background: #ccc;
+}
+
+.btn {
+	border-radius: 2px;
+}
+
+a.btn-link,
+a {
+	color: @blue_text!important;
+	font-weight: bold;
+}
+
+.header,
+.container,
+.footer {
+	position: relative;
 }
 
 .header {
-	background: #999;
-	position: relative;
+	background: @blue_text;
 	z-index: 3;
-	margin-bottom: 15px;
 	font-weight: bold;
 	position: relative;
 	font-size: 150%;
 	color: #fff;
 	text-align: center;
 	border-bottom: 5px solid #dfdfdf;
+	padding: 20px;
+}
+
+.footer {
+
+	padding: 20px;
+	text-align: center;
+	color: #fff;
+	background: #dfdfdf;
+	color: @blue_text;
+	z-index: 3;
 }
 
 .container {
-	width: 90%;
+	overflow-y: auto;
+	width: 100%;
+	background: #fff;
+	padding: 20px 10%; // height: 100%;
+	z-index: 2; // margin-top: -@height_header;
+	// padding-top: @height_header + 20px;
+	// margin-bottom: -@height_footer;
+	// padding-top: @height_header + 20px;
 }
+
 
 .well {
 	border-radius: 0px;
@@ -28,11 +67,27 @@ body {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	border: none;
-	margin-bottom: 0;
+	margin: 20px 0;
 }
 
 .form-group label {
 	font-weight: normal;
+}
+
+.page_title {
+	color: @blue_text;
+	font-size: @font_size_big;
+	padding: 20px;
+	font-weight: bold;
+	a.btn-link {
+		border-bottom: 1px dashed;
+		font-weight: normal;
+		&:hover {
+			text-decoration: none;
+			position: relative;
+			top: 1px;
+		}
+	}
 }
 
 .form_container {
@@ -62,7 +117,7 @@ body {
 		font-size: 150%;
 		margin-bottom: 30px;
 		text-align: center;
-		color: #093868;
+		color: @blue_text;
 		margin-top: 70px;
 		font-weight: bold;
 		.page_notice {
@@ -122,5 +177,66 @@ body {
 		border-bottom: 1px dashed #ccc;
 		padding-bottom: 20px;
 		padding-top: 10px;
+	}
+}
+
+.dataTables_wrapper {
+	background: #fff;
+	padding: 20px;
+	border-top: 14px solid #666;
+	label {
+		font-weight: normal!important;
+	}
+	.dataTables_length {
+		margin-bottom: 10px;
+	}
+	.dataTables_filter {
+		input {
+			border: 1px solid #ccc;
+		}
+	}
+	table.dataTable {
+		width: 100%!important;
+		margin-bottom: 15px;
+		th {
+			border-bottom-color: @blue_text;
+		}
+		td,
+		th {
+			border-collapse: collapse;
+		}
+	}
+	.dataTables_paginate {
+		.paginate_button {
+			&,
+			&:hover,
+			&.current,
+			&.current:hover {
+				background: none;
+				font-weight: normal;
+				border: none;
+			}
+			& {
+				padding: 5px 15px;
+			}
+			&:hover {
+				color: #000!important;
+				background: #ccc;
+			}
+			&.current {
+				&,
+				&:hover {
+					font-weight: bold;
+					color: #fff!important;
+					background: #ccc;
+				}
+			}
+			&.disabled {
+				&,
+				&:hover {
+					color: #aaa!important;
+				}
+			}
+		}
 	}
 }

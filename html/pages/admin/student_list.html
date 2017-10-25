@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <title>Sofast</title>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="/sofast/html/js/allJs.js"></script>
+</head>
+
+<body ng-app="soFast" class="ng-scope" ng-controller="showInfo">
+  <div class="header" ng-include="'/sofast/html/tmpl/layout/page_header.html'">
+  </div>
+  <div class="container">
+    <div class="page_title">Student List / <a href="student_new.html" class="btn-link btn-xs btn pull-right">
+              <span class="glyphicon glyphicon-plus"></span> New Student
+            </a></div>
+    <div ng-controller="add_courses as showCase" class="clearfix row-border hover">
+      <table datatable="" dt-options="showCase.dtOptions" dt-columns="showCase.dtColumns" class="table table-bordered"></table>
+    </div>
+  </div>
+  <div class="footer" ng-include="'/sofast/html/tmpl/layout/page_footer.html'"></div>
+</body>
+
+</html>
