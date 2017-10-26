@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://192.168.1.198:3306/so_fast</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <mapping class="com.sofast.application.model.QuestionnaireSurvey"/>
+        <mapping class="com.sofast.application.model.StudentBasic"/>
+        <mapping class="com.sofast.application.model.StudentHasQuestionnaireSurvey"/>
+        <mapping class="com.sofast.application.model.StudentInfo"/>
+        <mapping class="com.sofast.application.model.User"/>
+        <mapping class="com.sofast.application.model.Address"/>
+        <mapping class="com.sofast.application.model.Phone"/>
+        <mapping class="com.sofast.application.model.RecommenderInfo"/>
+        <mapping class="com.sofast.application.model.StandardizedTestAccountInfo"/>
+        <mapping class="com.sofast.application.model.StudentInfoHasRecommenderInfo"/>
+        <mapping class="com.sofast.application.model.StudentInfoHasStandardizedTestAccountInfo"/>
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
